@@ -6,8 +6,13 @@ Compliments Results
 
 {% block content %}
 
-<!-- Your HTML code goes here! -->
-
-
+Hello {{ name }}!
+{% if compliments_wanted == 'yes' %}
+{% for compliment in compliments %}
+<ul>
+    <li>You are {{ compliment }}</li>
+</ul>
+{% endfor %}
+{% endif %}
 
 {% endblock %}
